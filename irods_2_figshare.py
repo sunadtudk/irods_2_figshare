@@ -5,7 +5,7 @@
 # pip install --upgrade pip
 # pip install --upgrade git+git://github.com/irods/python-irodsclient.git
 # pip install pigshare
-#
+#  Do a "pigshare -h"  to see the API ;-)
 # irods_2_figshare
 # By Sune Andersen
 # version 0.1b   
