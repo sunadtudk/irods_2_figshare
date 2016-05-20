@@ -12,12 +12,19 @@ nano /home/giraf/.pigshare.conf
 the file :
 
 [default]
+
 url = https://api.figshare.com/v2
+
 token = aff111111111111111111111111111111111111111111111111111436043762311191deadbeef1deadbeef1deadbeef1deadbeef1deadbeef1deadbeef
 
 [giraf@irods.dtu.dk ~]$ pigshare create_article --article '{"title": "irods test", "custom_fields": {"key1": "from_irods"}}'
+
 {
+
   "location": "https://api.figshare.com/v2/account/articles/3393111"
+
 }
+
 [giraf@irods.dtu.dk ~]$ pigshare upload_new_file --id 3393111 figshare_test.txt
+
 Expecting value: line 1 column 1 (char 0)
