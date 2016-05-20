@@ -25,3 +25,9 @@ objf = sess.data_objects.get("/MyZone/home/irodsuser/figshare_test.txt")
 with objf.open('r+') as f:
    for line in f:
      fileout.write(line)
+#   Test : 
+#   pigshare create_article --article '{"title": "irods test", "custom_fields": {"key1": "from_irods"}}'
+#   {
+#  "location": "https://api.figshare.com/v2/account/articles/3393214"    <----  This number is the article ID for upload
+#  }
+#  pigshare upload_new_file --id 3393214 figshare_test.txt
