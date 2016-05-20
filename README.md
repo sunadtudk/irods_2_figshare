@@ -17,6 +17,8 @@ url = https://api.figshare.com/v2
 
 token = aff111111111111111111111111111111111111111111111111111436043762311191deadbeef1deadbeef1deadbeef1deadbeef1deadbeef1deadbeef
 
+token is the Personal Tokens found under : https://figshare.com/account/applications 
+
 [giraf@irods.dtu.dk ~]$ pigshare create_article --article '{"title": "irods test", "custom_fields": {"key1": "from_irods"}}'
 
 {
