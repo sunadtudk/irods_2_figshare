@@ -31,3 +31,14 @@ with objf.open('r+') as f:
 #########  Test figshare API#############
 #result = api.call_list_articles()
 #print result
+# Upload picture Test : 
+#   pigshare create_article --article '{"title": "irods test", "custom_fields": {"key1": "from_irods"}}'
+#   {
+#  "location": "https://api.figshare.com/v2/account/articles/3393214"    <----  This number is the article ID for upload
+#  }
+#  pigshare upload_new_file --id 3393214 figshare_test.txt
+#BASH #   pigshare create_article --article '{"title": "irods test", "custom_fields": {"key1": "from_irods"}}'
+#{
+# "location": "https://api.figshare.com/v2/account/articles/3393214"    <----  This number is the article ID for upload
+#}
+#BASH #    pigshare upload_new_file --id 3393214 figshare_test.txt
