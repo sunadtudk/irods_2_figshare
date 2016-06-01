@@ -1,5 +1,11 @@
 # irods_2_figshare
-This is a PoC of copying files from iRODS to FigShare via PigShare
+This is a PoC of copying files from iRODS to FigShare via PigShare (installed with pip)
+yum update ; yum -y install python-pip
+pip install git+git://github.com/iPlantCollaborativeOpenSource/pycommands.git
+pip install --upgrade pip
+pip install --upgrade git+git://github.com/irods/python-irodsclient.git
+pip install pigshare
+pip install --upgrade pigshare
 
 pigshare is from my NZ-friend :  Markus Binsteiner @ https://github.com/makkus/pigshare  
 
