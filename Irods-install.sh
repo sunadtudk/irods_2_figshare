@@ -10,8 +10,12 @@ cd irods-4.1.9/packaging/
 ./build.sh -s resource
 ./build.sh -s icommands
 
-yum -y install epel-release net-tools wget nano mc mlocate ImageMagick python-devel rpm-build help2man bzip2-devel libxml2-devel unixODBC pam-devel openssl-devel wget nano mc tomcat tomcat-webappsl tomcat-admin-webapps tomcat-docs-webapp tomcat-javadoc net-tools postgresql postgresql-serverl postgresql-contrib postgresql-libs postgresql-odbc fuse-libs.x86_64 perl-JSON* python-requests.noarch python-jsonschema python-psutil lsof authd
-
+yum -y install epel-release net-tools wget nano mc mlocate ImageMagick python-devel rpm-build 
+yum -y help2man bzip2-devel libxml2-devel unixODBC pam-devel openssl-devel wget nano mc tomcat 
+yum -y tomcat-webappsl tomcat-admin-webapps tomcat-docs-webapp tomcat-javadoc net-tools postgresql 
+yum -y postgresql-serverl postgresql-contrib postgresql-libs postgresql-odbc fuse-libs.x86_64 perl-JSON* 
+yum -y python-requests.noarch python-jsonschema python-psutil lsof authd
+yum -y install postgresql postgresql-libs postgresql-plperl postgresql-plpython postgresql-server
 cd ~/irods-4.1.9/build/
 rpm -ivh irods-icat-4.1.9-64bit-centos7.rpm
 rpm -ivh irods-database-plugin-postgres-1.9-centos7.rpm
