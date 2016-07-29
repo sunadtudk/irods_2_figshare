@@ -18,7 +18,7 @@ pigshare is from my NZ-friend :  Markus Binsteiner @ https://github.com/makkus/p
 
 Clone : https://github.com/makkus/pigshare.git
 
-I use a CentOS 7...  with a iRODS 4.1.8
+I use a CentOS 7...  with a iRODS 4.1.8 (testing with 4.1.9 and 4.2)
 
 Build from my bash script https://github.com/sunadtudk/irods_2_figshare/blob/master/Irods-install.sh
 
