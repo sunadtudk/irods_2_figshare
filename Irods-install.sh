@@ -10,13 +10,15 @@ firewall-cmd --zone=public --add-service=https --permanent
 firewall-cmd --reload
 ##FirewallD  ##
 ##  Install from a .gz file ( ftp://ftp.renci.org/pub/irods/releases/4.1.9/  )
-yum -y install gcc-c++ make python-devel rpm-build help2man unixODBC fuse-devel curl-devel
+yum -y install gcc-c++ make python-devel rpm-build help2man unixODBC fuse-devel unixODBC-devel curl-devel
 yum -y install bzip2-devel zlib-devel pam-devel openssl-devel libxml2-devel perl-JSON rsync
 wget ftp://ftp.renci.org/pub/irods/releases/4.1.9/irods-4.1.9.tar.gz
 tar -zxvf irods-4.1.9.tar.gz
 cd irods-4.1.9/packaging/
-./build.sh  icat postgres ;  ./build.sh -s resource ; ./build.sh -s icommands
- cd /../build/
+./build.sh  icat postgres
+./build.sh -s resource
+./build.sh -s icommands
+cd /../build/
 rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 yum -y install http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm
 yum -y install http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
