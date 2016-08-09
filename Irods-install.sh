@@ -7,13 +7,14 @@ yum -y install tomcat-docs-webapp tomcat-javadoc net-tools postgresql postgresql
 yum -y install postgresql-odbc fuse-libs.x86_64 perl-JSON* python-requests.noarch python-jsonschema python-psutil lsof
 yum -y install authd postgresql postgresql-libs postgresql-plperl postgresql-plpython postgresql-server python-jsonschema python-psutil python-requests postgresql-odbc
 
-#wget ftp://ftp.renci.org/pub/irods/releases/4.1.9/irods-4.1.9.tar.gz
-#tar -zxvf irods-4.1.9.tar.gz
-#cd irods-4.1.9/packaging/
-#./build.sh  icat postgres
-#./build.sh -s resource
-#./build.sh -s icommands
-
+#############Build iRODS server###############
+wget ftp://ftp.renci.org/pub/irods/releases/4.1.9/irods-4.1.9.tar.gz
+tar -zxvf irods-4.1.9.tar.gz
+cd irods-4.1.9/packaging/
+./build.sh  icat postgres
+./build.sh -s resource
+./build.sh -s icommands
+###############Install###############
 cd ~/irods-4.1.9/build/
 rpm -ivh irods-icat-4.1.9-64bit-centos7.rpm
 rpm -ivh irods-database-plugin-postgres-1.9-centos7.rpm
