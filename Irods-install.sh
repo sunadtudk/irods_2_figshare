@@ -7,6 +7,19 @@ yum -y install tomcat-docs-webapp tomcat-javadoc net-tools postgresql postgresql
 yum -y install postgresql-odbc fuse-libs.x86_64 perl-JSON* python-requests.noarch python-jsonschema python-psutil lsof
 yum -y install authd postgresql postgresql-libs postgresql-plperl postgresql-plpython postgresql-server python-jsonschema python-psutil python-requests postgresql-odbc
 
+yum -y groupinstall "Development Tools"
+yum -y install python-pip git gettext-devel openssl-devel perl-CPAN perl-devel zlib-devel
+##############
+git clone https://github.com/DICE-UNC/irods-cloud-browser.git
+git clone https://github.com/sunadtudk/irods_2_figshare.git
+##############
+pip install git+git://github.com/iPlantCollaborativeOpenSource/pycommands.git
+pip install --upgrade pip
+pip install --upgrade git+git://github.com/irods/python-irodsclient.git
+pip install pigshare
+#pip install --upgrade pigshare
+###############################
+
 #############Build iRODS server###############
 wget ftp://ftp.renci.org/pub/irods/releases/4.1.9/irods-4.1.9.tar.gz
 tar -zxvf irods-4.1.9.tar.gz
