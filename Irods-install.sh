@@ -8,7 +8,9 @@ yum -y install postgresql-odbc fuse-libs.x86_64 perl-JSON* python-requests.noarc
 yum -y install authd postgresql postgresql-libs postgresql-plperl postgresql-plpython postgresql-server python-jsonschema python-psutil python-requests postgresql-odbc
 yum -y groupinstall "Development Tools"
 yum -y install python-pip git gettext-devel openssl-devel perl-CPAN perl-devel zlib-devel
-##############
+############NodeJS install
+curl --silent --location https://rpm.nodesource.com/setup_6.x | bash - ; yum -y install nodejs ; yum install gcc-c++ make
+#####
 git clone https://github.com/DICE-UNC/irods-cloud-browser.git
 git clone https://github.com/sunadtudk/irods_2_figshare.git
 ##############
