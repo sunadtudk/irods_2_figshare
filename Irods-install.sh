@@ -18,9 +18,9 @@ pip install pigshare
 wget ftp://ftp.renci.org/pub/irods/releases/4.1.9/irods-4.1.9.tar.gz
 tar -zxvf irods-4.1.9.tar.gz
 cd irods-4.1.9/packaging/
-./build.sh –r -v  icat postgres
-./build.sh  -r –v resource
-./build.sh  -r –v icommands
+./build.sh –r icat postgres
+./build.sh -r resource
+./build.sh -r icommands
 ###############Install###############
 cd ~/irods-4.1.9/build/
 rpm -ivh irods-icat-4.1.9-64bit-centos7.rpm
