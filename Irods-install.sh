@@ -15,6 +15,7 @@ pip install pigshare
 #pip install --upgrade pigshare
 ###############################
 #############Build iRODS server###############
+###do :  cd /root
 wget ftp://ftp.renci.org/pub/irods/releases/4.1.9/irods-4.1.9.tar.gz
 tar -zxvf irods-4.1.9.tar.gz
 cd irods-4.1.9/packaging/
