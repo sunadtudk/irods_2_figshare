@@ -10,6 +10,7 @@ yum -y install postgresql-server python-jsonschema python-psutil python-requests
 yum -y groupinstall "Development Tools"
 yum -y install python-pip git gettext-devel openssl-devel perl-CPAN perl-devel zlib-devel
 ##############
+#sleep 5
 git clone https://github.com/DICE-UNC/irods-cloud-browser.git
 git clone https://github.com/sunadtudk/irods_2_figshare.git
 ##############
@@ -18,6 +19,7 @@ pip install --upgrade pip
 pip install --upgrade git+git://github.com/irods/python-irodsclient.git
 pip install pigshare
 pip install --upgrade pigshare
+#sleep 5
 ###############################
 #############Build iRODS server###############
 ###do :  cd /root
@@ -28,11 +30,13 @@ cd irods-4.1.9/packaging/
 ./build.sh icat postgres
 ./build.sh -r -v resource
 ./build.sh icommands
+#sleep 5
 ###############################
 git clone https://github.com/irods/irods_auth_plugin_kerberos.git
 cd irods_auth_plugin_kerberos/packaging/
 ./build.sh ; cd .. ; cd ..
-mv irods_auth_plugin_kerberos/build/irods-auth-plugin-krb* irods-4.1.9/build/
+rpm -ivh irods_auth_plugin_kerberos/build/irods-auth-plugin-krb-1.3-*
+#sleep 5
 ###############Install###############
 cd ~/irods-4.1.9/build/
 rpm -ivh irods-icat-4.1.9-64bit-centos7.rpm
@@ -43,9 +47,7 @@ rpm -ivh irods-runtime-4.1.9-64bit-centos7.rpm
 #rpm -ivh irods-resource-4.1.9-64bit-centos7.rpm
 #Kerberos plugin:
 rpm -ivh irods-auth-plugin-krb-*.rpm
-######config iRODS server#######
-sudo /var/lib/irods/packaging/setup_irods.sh
-# rpm -ivh irods-icommands-4.1.9-64bit-centos7.rpm
+######config iRODS server and DB#######
 ####################
 postgresql-setup initdb
 systemctl start postgresql
