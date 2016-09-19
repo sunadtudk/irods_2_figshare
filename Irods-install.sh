@@ -1,11 +1,11 @@
 ##  Install from a .gz file ( ftp://ftp.renci.org/pub/irods/releases/4.1.9/  )
 yum -y install gcc-c++ make python-devel rpm-build help2man unixODBC fuse-devel curl-devel
-yum -y install --enablerepo=centosplus openssl-devel pam-devel bzip2-devel zlib-devel pam-devel openssl-devel libxml2-devel 
+yum -y install --enablerepo=centosplus openssl-devel pam-devel bzip2-devel zlib-devel pam-devel openssl-devel libxml2-devel
 yum -y install perl-JSON rsync unixODBC-devel epel-release net-tools wget nano mc mlocate ImageMagick python-devel
-yum -y install rpm-build help2man bzip2-devel libxml2-devel unixODBC pam-devel openssl-devel wget nano mc tomcat tomcat-webappsl 
-yum -y install tomcat-admin-webapps tomcat-docs-webapp tomcat-javadoc net-tools postgresql postgresql-serverl postgresql-contrib 
-yum -y install postgresql-libs postgresql-odbc fuse-libs.x86_64 perl-JSON* python-requests.noarch python-jsonschema 
-yum -y install python-psutil lsof authd postgresql postgresql-libs postgresql-plperl postgresql-plpython 
+yum -y install rpm-build help2man bzip2-devel libxml2-devel unixODBC pam-devel openssl-devel wget nano mc tomcat tomcat-webapp*
+yum -y install tomcat-admin-webapps tomcat-docs-webapp tomcat-javadoc net-tools postgresql-contrib
+yum -y install postgresql-libs postgresql-odbc fuse-libs.x86_64 perl-JSON* python-requests.noarch python-jsonschema
+yum -y install python-psutil lsof authd postgresql postgresql-libs postgresql-plperl postgresql-plpython
 yum -y install postgresql-server python-jsonschema python-psutil python-requests postgresql-odbc
 yum -y groupinstall "Development Tools"
 yum -y install python-pip git gettext-devel openssl-devel perl-CPAN perl-devel zlib-devel
